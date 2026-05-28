@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python -c \"from hello_agents import HelloAgentsLLM; import inspect; print\\(inspect.signature\\(HelloAgentsLLM.__init__\\)\\)\")",
+      "Bash(python -c \"from hello_agents import SimpleAgent; import inspect; print\\(inspect.signature\\(SimpleAgent.run\\)\\)\")",
+      "Bash(python -c \"from hello_agents import HelloAgentsLLM; import inspect; src = inspect.getsource\\(HelloAgentsLLM.__init__\\); print\\(src[:2000]\\)\")",
+      "Bash(python -c \"from hello_agents import SimpleAgent; import inspect; src = inspect.getsource\\(SimpleAgent.run\\); print\\(src[:3000]\\)\")"
+    ]
+  }
+}
