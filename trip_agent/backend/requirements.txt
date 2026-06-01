@@ -1,5 +1,6 @@
-# HelloAgents框架
-hello-agents[protocols]>=0.2.4,<=0.2.9
+# LangChain框架
+langchain>=0.3.0
+langchain-openai>=0.2.0
 
 # FastAPI和相关依赖
 fastapi>=0.115.0
@@ -19,10 +20,6 @@ python-multipart>=0.0.9
 
 # 日志
 loguru>=0.7.0
-
-# MCP相关
-fastmcp>=2.0.0
-uv>=0.8.0
 
 # 其他工具
 python-dateutil>=2.8.2

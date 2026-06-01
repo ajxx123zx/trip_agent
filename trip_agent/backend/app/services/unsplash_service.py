@@ -1,6 +1,6 @@
 """Unsplash图片服务"""
 
-import requests
+import httpx
 from typing import List, Optional
 from ..config import get_settings
 
@@ -32,9 +32,9 @@ class UnsplashService:
                 "client_id": self.access_key
             }
             
-            response = requests.get(url, params=params, timeout=10)
+            response = httpx.get(url, params=params, timeout=10.0)
             response.raise_for_status()
-            
+
             data = response.json()
             results = data.get("results", [])
             

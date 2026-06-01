@@ -69,14 +69,16 @@ async def plan_trip(request: TripRequest):
 async def health_check():
     """健康检查"""
     try:
-        # 检查Agent是否可用
         agent = get_trip_planner_agent()
-        
+
         return {
             "status": "healthy",
             "service": "trip-planner",
-            "agent_name": agent.agent.name,
-            "tools_count": len(agent.agent.list_tools())
+            "framework": "LangChain",
+            "tools_count": len(agent.amap_tools),
+            "has_attraction_agent": agent.attraction_agent is not None,
+            "has_weather_agent": agent.weather_agent is not None,
+            "has_hotel_agent": agent.hotel_agent is not None,
         }
     except Exception as e:
         raise HTTPException(
