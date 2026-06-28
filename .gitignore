@@ -1,0 +1,41 @@
+# ===== 密钥文件 — 绝对不能提交 =====
+.env
+backend/.env
+frontend/.env
+*.env
+!.env.example
+
+# ===== Python =====
+__pycache__/
+*.py[cod]
+*.pyo
+*.egg-info/
+dist/
+build/
+*.egg
+
+# ===== 虚拟环境 =====
+venv/
+.venv/
+env/
+test_agent/
+
+# ===== IDE =====
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# ===== Node.js =====
+node_modules/
+frontend/dist/
+
+# ===== 系统文件 =====
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ===== 临时文件 =====
+*.log
+*.tmp
